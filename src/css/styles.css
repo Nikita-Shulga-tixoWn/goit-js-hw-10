@@ -16,3 +16,179 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+
+
+/* ====== RESET ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+  color: #2e2f42;
+  line-height: 1.5;
+  padding: 40px;
+}
+
+/* ====== HEADER ====== */
+.header,
+header {
+  margin-bottom: 40px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #2e2f42;
+  text-align: center;
+  flex: 1;
+}
+
+/* ====== BACK LINK ====== */
+.back-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  padding: 6px 14px;
+  transition: 0.3s;
+}
+
+.back-link:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* ====== TIMER ====== */
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  font-size: 50px;
+  font-weight: 600;
+  color: #2e2f42;
+}
+
+.label {
+  font-size: 16px;
+  color: #555;
+}
+
+/* ====== INPUTS & BUTTON ====== */
+#datetime-picker {
+  margin-left: 42%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  max-width: 200px;
+  outline: none;
+  transition: 0.2s;
+}
+
+#datetime-picker:focus {
+  border-color: #007bff;
+}
+
+button[data-start],
+button[type='submit'] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[data-start]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* ====== FORM ====== */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2e2f42;
+}
+
+input[type='number'],
+input[type='text'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: #007bff;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+}
+
+legend {
+  font-weight: 600;
+  color: #2e2f42;
+  padding: 0 6px;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 600px) {
+  .timer {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .value {
+    font-size: 36px;
+  }
+}
